@@ -1,1 +1,37 @@
-
+<table class="table">
+    <thead>
+    <tr>
+        <th class="entertain-me-green-color" scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">
+            <i class="material-icons">map</i>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-cloak ng-repeat="venue in venues">
+        <th scope="row">{{$index + 1}}</th>
+        <td>{{venue.name}}</td>
+        <td>
+            <span ng-repeat="category in venue.categories">
+                <img class="entertain-me-venue-icon" alt="Category"
+                     ng-src="{{category.icon.prefix + 'bg_32' + category.icon.suffix}}">
+                <span>{{category.name}}</span>
+            </span>
+        </td>
+        <td>
+            <a ng-href="{{'https://www.google.com/maps?q=' + venue.location.formattedAddress[0]}}" target=”_blank”>
+                <i class="material-icons">place</i>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="text-center">
+    <span ng-show="!loading && !venues.length && moreFiltersDisabled">Please choose a place.</span>
+    <span ng-show="!loading && !venues.length && !moreFiltersDisabled">No venues here.</span>
+</div>
+<div class="entertain-me-loader-container">
+    <div class="entertain-me-loader" ng-show="loading"></div>
+</div>
