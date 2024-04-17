@@ -1,0 +1,111 @@
+/* ngCloak CSS: https://code.angularjs.org/1.5.11/docs/api/ng/directive/ngCloak */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+/* Loader inspired from: https://www.w3schools.com/howto/howto_css_loader.asp */
+.entertain-me-loader {
+    margin: auto;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #0ABF53;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+.entertain-me-loader-container {
+    padding: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Added some color */
+body {
+    background: linear-gradient(90deg, #0ABF53 0%, #4EE5E5 100%);
+}
+
+.entertain-me-container {
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.entertain-me-autocomplete:focus, select.form-control:focus {
+    box-shadow: 0 0 0 0.2rem #99e6bb;;
+}
+
+.entertain-me-search-icon i {
+    border: 1px solid #0ABF53;
+    padding: 6px;
+    border-radius: 5px 0 0 5px;
+    color: white;
+    background-color: #0ABF53;
+}
+
+.entertain-me-search-icon input {
+    border: 1px solid #0ABF53;
+    border-left: 0;
+}
+
+.entertain-me-green-color {
+    color: #0ABF53;
+}
+
+tbody tr th:first-child, tbody tr td:nth-child(3) {
+    background: #f3f6f9;
+    color: #0ABF53;
+}
+
+a .material-icons {
+    color: #0ABF53;
+}
+
+/* Logo */
+.entertain-me-logo {
+    padding: 10px 0;
+}
+
+.entertain-me-logo img {
+    max-width: 100px;
+}
+
+.entertain-me-logo svg {
+    float: right;
+}
+
+.entertain-me-logo .entertain-me-teaser {
+    color: #0ABF53;
+}
+
+/* Mobile support */
+@media only screen and (max-width: 812px) {
+    .entertain-me-venue-icon {
+        max-width: 20px;
+    }
+
+    tbody {
+        font-size: 12px;
+    }
+
+    body {
+        background: white;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .entertain-me-logo svg {
+        display: none;
+    }
+
+    .entertain-me-logo .entertain-me-frog {
+        text-align: center;
+    }
+}
