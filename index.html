@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Entertain Me</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <link rel="shortcut icon" href="app/favicon.png"/>
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CDN Bootstrap CSS 4.1.3 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Entertain Me CSS -->
+    <link rel="stylesheet" href="app/css/main.css">
+
+</head>
+
+<body>
+<div class="container entertain-me-container" ng-app="entertain-me" ng-controller="VenuesController">
+    <div ng-include="'app/templates/logo.html'"></div>
+    <div ng-include="'app/templates/venues-filters.html'"></div>
+    <div ng-include="'app/templates/venues-list.html'"></div>
+</div>
+
+<!-- CDN Angular JS 1.5.11 -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+<!-- CDN Google Maps API  and Angular JS Google Maps adapter -->
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDrk46T5CDsbGmLafR0gzcmOds_Oqw2_XU"></script>
+<script src="https://jvandemo.github.io/angularjs-google-maps/dist/angularjs-google-maps.min.js"></script>
+
+<!-- Entertain Me JavaScript -->
+<script src="app/js/app.js"></script>
+<script src="app/js/VenuesController.js"></script>
+<script src="app/js/FoursquareConstants.js"></script>
+<script src="app/js/FoursquareAPIService.js"></script>
+<script src="app/js/GeolocationService.js"></script>
+
+</body>
+</html>
